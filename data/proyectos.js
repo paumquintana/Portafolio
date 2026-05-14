@@ -9,7 +9,7 @@ const MATERIAS = [
     color:   "pink",
     proyectos: [
       {
-        nombre: "Dashboard BI,
+        nombre: "Dashboard BI",
         repo:   "https://github.com/bypaupau/BI-Webpage-Base-De-Datos-Proyecto-II-Parcial",
         estado: "completado"
       }
