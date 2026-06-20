@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>pau.proyectos · proyectos</title>
-<meta name="description" content="Proyectos destacados de Pau — cada uno en su propio repositorio." />
+<meta name="description" content="Proyectos de Pau — académicos y personales, filtrables por materia, tipo y habilidad." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&family=VT323&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,49 +26,103 @@
 <main>
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-label">cada proyecto · su propio repo</p>
+      <p class="sec-label">académicos &amp; personales</p>
       <h1 class="sec-title">Proyectos</h1>
     </div>
 
-    <div class="cards grid-3">
-      <article class="win">
-        <div class="win-bar"><span class="win-title">proyecto_1.app</span><span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>
-        <div class="win-body">
-          <p class="meta">2026-1 · destacado</p>
-          <h3>Proyecto 1</h3>
-          <p>Descripción breve. Reemplaza con tu reto, tu solución y el resultado.</p>
-          <p style="margin:10px 0"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JS</span></p>
-          <a class="link" href="#">ver repo →</a>
-        </div>
-      </article>
-      <article class="win">
-        <div class="win-bar sky"><span class="win-title">proyecto_2.app</span><span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>
-        <div class="win-body">
-          <p class="meta">2026-1 · destacado</p>
-          <h3>Proyecto 2</h3>
-          <p>Descripción breve. Reemplaza con tu reto, tu solución y el resultado.</p>
-          <p style="margin:10px 0"><span class="pill">Python</span><span class="pill">Datos</span></p>
-          <a class="link" href="#">ver repo →</a>
-        </div>
-      </article>
-      <article class="win">
-        <div class="win-bar lav"><span class="win-title">proyecto_3.app</span><span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>
-        <div class="win-body">
-          <p class="meta">próximamente</p>
-          <h3>Proyecto 3</h3>
-          <p>Espacio reservado para un proyecto futuro de 7mo u 8vo semestre. ¡Stay tuned!</p>
-          <p style="margin:10px 0"><span class="pill">?</span></p>
-          <a class="link" href="#">pronto ✦</a>
-        </div>
-      </article>
-    </div>
-
-    <p style="margin-top:26px;font-family:var(--font-term);font-size:1.15rem;color:var(--text-soft)">
-      ¿Buscas el detalle por materia? → <a class="link" href="materias.html">ver materias por semestre</a>
-    </p>
+    <div class="filters-bar" id="filtros"></div>
+    <div class="materias-grid" id="proyectos-grid"></div>
   </div>
 </main>
 
 <p class="foot">hecho con <span class="hp">&lt;3</span> + pixeles · por Pau · © 2026</p>
+
+<script src="data/proyectos.js"></script>
+<script>
+(function(){
+  var BADGE = {
+    'completado':  { label:'listo',       css:'bd-done' },
+    'en-progreso': { label:'en progreso', css:'bd-wip'  },
+    'pronto':      { label:'pronto',      css:'bd-soon' }
+  };
+  var grid = document.getElementById('proyectos-grid');
+  var fbox = document.getElementById('filtros');
+  if(!grid || typeof PROYECTOS==='undefined') return;
+
+  var TIPO_LABEL = { academico:'Académicos', personal:'Personales', hackathon:'Hackathones' };
+  var barColors = ['', 'sky', 'lav', 'mint', 'peach'];
+
+  // construir conjuntos de filtros
+  var materias=[], tipos=[], skills=[];
+  PROYECTOS.forEach(function(p){
+    if(materias.indexOf(p.materia)<0) materias.push(p.materia);
+    if(tipos.indexOf(p.tipo)<0) tipos.push(p.tipo);
+    (p.habilidades||[]).forEach(function(s){ if(skills.indexOf(s)<0) skills.push(s); });
+  });
+
+  function dd(id, label, opts){
+    var o = '<option value="">Todos</option>' + opts.map(function(v){
+      return '<option value="'+v.val+'">'+v.txt+'</option>'; }).join('');
+    return '<div class="dd"><label for="'+id+'">'+label+'</label><select id="'+id+'">'+o+'</select></div>';
+  }
+  fbox.innerHTML =
+    dd('f-tipo','tipo', tipos.map(function(t){ return {val:t, txt:TIPO_LABEL[t]||t}; })) +
+    dd('f-materia','materia', materias.map(function(m){ return {val:m, txt:m}; })) +
+    dd('f-skill','habilidad', skills.map(function(s){ return {val:s, txt:s}; })) +
+    '<button class="reset-btn" id="f-reset">limpiar ✕</button>';
+
+  function render(){
+    grid.innerHTML = PROYECTOS.map(function(p,i){
+      var bar = barColors[i % barColors.length];
+      var b = BADGE[p.estado] || BADGE['pronto'];
+      var pills = (p.habilidades||[]).map(function(s){ return '<span class="pill">'+s+'</span>'; }).join('');
+      var TIPO_TXT = { academico:'académico', personal:'personal', hackathon:'hackathon' };
+      var tipoTxt = TIPO_TXT[p.tipo] || p.tipo;
+      var link = (p.repo && p.repo!=='#')
+        ? '<a class="link" href="'+p.repo+'" target="_blank" rel="noopener">ver repo →</a>'
+        : '<span class="link" style="opacity:.6">pronto ✦</span>';
+      var thumb = p.img
+        ? '<div class="proj-thumb"><img src="'+p.img+'" alt="'+p.nombre+'"></div>'
+        : '<div class="proj-thumb"><span class="ph">▢ captura<br>pronto</span></div>';
+      return '<article class="win proj-card" data-tipo="'+p.tipo+'" data-materia="'+p.materia+'" data-skills="'+(p.habilidades||[]).join('|')+'">'+
+        '<div class="win-bar '+bar+'"><span class="win-title">'+p.nombre+'</span>'+
+        '<span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>'+
+        thumb +
+        '<div class="mat-body">'+
+        '<p class="meta">'+p.periodo+' · '+tipoTxt+'</p>'+
+        '<h3 class="mat-name">'+p.nombre+'</h3>'+
+        '<p style="font-size:.9rem;color:var(--text-soft);margin-bottom:10px">'+p.descripcion+'</p>'+
+        '<p style="margin-bottom:10px">'+pills+'</p>'+
+        '<p>'+link+' <span class="badge '+b.css+'">'+b.label+'</span></p>'+
+        '</div></article>';
+    }).join('');
+  }
+  render();
+
+  var selTipo = document.getElementById('f-tipo');
+  var selMat  = document.getElementById('f-materia');
+  var selSkill= document.getElementById('f-skill');
+
+  function applyFilter(){
+    var ft = selTipo.value, fm = selMat.value, fs = selSkill.value;
+    var cards = grid.querySelectorAll('.proj-card');
+    var shown = 0;
+    cards.forEach(function(c){
+      var ok = (!ft || c.dataset.tipo===ft) &&
+               (!fm || c.dataset.materia===fm) &&
+               (!fs || ('|'+c.dataset.skills+'|').indexOf('|'+fs+'|')>=0);
+      c.classList.toggle('hide', !ok);
+      if(ok) shown++;
+    });
+    var prev = grid.querySelector('.no-proj'); if(prev) prev.remove();
+    if(shown===0){ var n=document.createElement('p'); n.className='no-proj'; n.textContent='Sin proyectos con esos filtros… ¡pronto! ✿'; grid.appendChild(n); }
+  }
+
+  [selTipo,selMat,selSkill].forEach(function(s){ s.addEventListener('change', applyFilter); });
+  document.getElementById('f-reset').addEventListener('click', function(){
+    selTipo.value=''; selMat.value=''; selSkill.value=''; applyFilter();
+  });
+})();
+</script>
 </body>
 </html>

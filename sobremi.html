@@ -30,46 +30,156 @@
       <h1 class="sec-title">Sobre mí</h1>
     </div>
 
-    <div class="cards grid-2">
-      <div class="win">
-        <div class="win-bar lav">
-          <span class="win-title">hola.txt</span>
-          <span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span>
-        </div>
-        <div class="win-menu"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>V</u>iew</span></div>
-        <div class="win-body">
+    <!-- ▸ DE UN VISTAZO (contadores) -->
+    <div class="stats" style="margin-bottom:26px">
+      <div class="stat"><div class="num">6to</div><div class="lbl">semestre</div></div>
+      <div class="stat"><div class="num">2</div><div class="lbl">hackathones ganados</div></div>
+      <div class="stat"><div class="num">2</div><div class="lbl">cursos Udemy</div></div>
+      <div class="stat"><div class="num">7</div><div class="lbl">proyectos</div></div>
+    </div>
+
+    <!-- ▸ DESCRIPCIÓN -->
+    <div class="win" style="margin-bottom:24px">
+      <div class="win-bar lav">
+        <span class="win-title">hola.txt</span>
+        <span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span>
+      </div>
+      <div class="win-menu"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>V</u>iew</span></div>
+      <div class="win-body">
+        <div class="item-row">
           <svg class="sprite float" viewBox="0 0 7 6" width="56" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="corazón pixel">
-            <rect x="1" y="0" width="2" height="1" fill="#E87EA1"/>
-            <rect x="4" y="0" width="2" height="1" fill="#E87EA1"/>
-            <rect x="0" y="1" width="7" height="2" fill="#E87EA1"/>
-            <rect x="1" y="3" width="5" height="1" fill="#E87EA1"/>
-            <rect x="2" y="4" width="3" height="1" fill="#E87EA1"/>
-            <rect x="3" y="5" width="1" height="1" fill="#E87EA1"/>
+            <rect x="1" y="0" width="2" height="1" fill="#E87EA1"/><rect x="4" y="0" width="2" height="1" fill="#E87EA1"/>
+            <rect x="0" y="1" width="7" height="2" fill="#E87EA1"/><rect x="1" y="3" width="5" height="1" fill="#E87EA1"/>
+            <rect x="2" y="4" width="3" height="1" fill="#E87EA1"/><rect x="3" y="5" width="1" height="1" fill="#E87EA1"/>
           </svg>
-          <p class="about-lead" style="margin-top:14px">Soy estudiante de <strong>Ingeniería en Computación</strong>.
-          Mezclo lo técnico con lo bonito: me encanta cuando el código se siente como un espacio cálido.
-          Cada proyecto es una excusa para experimentar con diseño, UX e ideas nuevas.</p>
-          <p style="margin-top:14px">
-            <span class="pill">UX / UI</span><span class="pill">Front-end</span><span class="pill">Diseño</span><span class="pill">Programación</span><span class="pill">Arte digital</span>
-          </p>
+          <p class="about-lead">Soy estudiante de <strong>Ingeniería en Computación</strong> en la
+          Universidad de Especialidades Espíritu Santo. Mezclo lo técnico con lo bonito: me encanta
+          cuando el código se siente como un espacio cálido. Cada proyecto es una excusa para
+          experimentar con <strong>diseño, datos y nuevas ideas</strong>, y aspiro a crear cosas que
+          dejen huella y reflejen mi creatividad. ✿</p>
         </div>
       </div>
+    </div>
 
-      <div class="win">
-        <div class="win-bar mint">
-          <span class="win-title">esto_soy_yo</span>
-          <span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span>
+    <!-- ▸ CONOCIMIENTOS -->
+    <div class="win" style="margin-bottom:24px">
+      <div class="win-bar mint">
+        <span class="win-title">conocimientos.cfg</span>
+        <span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span>
+      </div>
+      <div class="win-body">
+        <div class="skill-group">
+          <h4>&gt; desarrollo</h4>
+          <div class="skill-tags">
+            <span class="skill dev">HTML</span><span class="skill dev">CSS</span><span class="skill dev">JavaScript</span>
+          </div>
         </div>
-        <div class="win-body">
-          <p class="about-lead">Este portafolio reúne lo que construyo durante <strong>6to, 7mo y 8vo semestre</strong>.
-          Me mueve la intersección entre <strong>tecnología y creatividad</strong>: interfaces con personalidad,
-          detalles cuidados y una pizca de magia pixelada. ✿</p>
-          <div class="hero-btns" style="margin-top:22px">
-            <a class="btn btn-sky" href="proyectos.html">Ver Proyectos</a>
-            <a class="btn btn-ghost" href="contacto.html">Contacto</a>
+        <div class="skill-group">
+          <h4>&gt; datos &amp; programación</h4>
+          <div class="skill-tags">
+            <span class="skill data">Python</span><span class="skill data">Data Science</span><span class="skill data">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group" style="margin-bottom:0">
+          <h4>&gt; diseño</h4>
+          <div class="skill-tags">
+            <span class="skill design">Illustrator</span><span class="skill design">Photoshop</span>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- ▸ APRENDIZAJE -->
+    <div class="sec-head" style="margin-top:36px">
+      <p class="sec-label">cursos &amp; autoaprendizaje</p>
+      <h2 class="sec-title" style="font-size:clamp(1.6rem,4vw,2.2rem)">Aprendizaje continuo</h2>
+    </div>
+    <div class="cards grid-2">
+      <article class="win">
+        <div class="win-bar sky"><span class="win-title">curso_01.pdf</span><span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>
+        <div class="win-body">
+          <div class="item-row">
+            <span class="badge-img win-yellow">★</span>
+            <div>
+              <p class="item-meta">Udemy · 2025</p>
+              <p class="item-title">Nombre del curso 1</p>
+              <p class="item-desc">Reemplaza con el título real y lo que aprendiste (lenguaje, herramienta o tema).</p>
+            </div>
+          </div>
+          <p style="margin-top:12px"><a class="link" href="#">ver curso →</a></p>
+        </div>
+      </article>
+      <article class="win">
+        <div class="win-bar sky"><span class="win-title">curso_02.pdf</span><span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>
+        <div class="win-body">
+          <div class="item-row">
+            <span class="badge-img win-yellow">★</span>
+            <div>
+              <p class="item-meta">Udemy · 2025</p>
+              <p class="item-title">Nombre del curso 2</p>
+              <p class="item-desc">Reemplaza con el título real y lo que aprendiste (lenguaje, herramienta o tema).</p>
+            </div>
+          </div>
+          <p style="margin-top:12px"><a class="link" href="#">ver curso →</a></p>
+        </div>
+      </article>
+    </div>
+
+    <!-- ▸ HACKATHONES -->
+    <div class="sec-head" style="margin-top:36px">
+      <p class="sec-label">concursos &amp; hackathones</p>
+      <h2 class="sec-title" style="font-size:clamp(1.6rem,4vw,2.2rem)">Logros</h2>
+    </div>
+    <div class="cards grid-2">
+      <article class="win">
+        <div class="win-bar peach"><span class="win-title">spacehack_2025</span><span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>
+        <div class="win-body">
+          <div class="item-row">
+            <span class="badge-img win-lav">🏆</span>
+            <div>
+              <p class="item-meta">2025 · 1er lugar</p>
+              <p class="item-title">SpaceHACK for Sustainability 2025</p>
+              <p class="item-desc">¡Primer lugar! Agrega aquí el reto, tu solución y el enlace si lo tienes.</p>
+              <p><span class="tag-win">🏆 1er lugar</span></p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="win">
+        <div class="win-bar peach"><span class="win-title">wids_espol_2026</span><span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>
+        <div class="win-body">
+          <div class="item-row">
+            <span class="badge-img win-lav">🔥</span>
+            <div>
+              <p class="item-meta">2026 · 3er lugar · equipo Artemis</p>
+              <p class="item-title">WiDS Datathon ESPOL 2026 · Rutas de incendio</p>
+              <p class="item-desc">Tercer lugar. Notebook de ciencia de datos para analizar y predecir rutas de incendios.
+              <a class="link" href="https://github.com/DATATHON-WIDS/wids-datathon-2026-artemis-4" target="_blank" rel="noopener">ver notebook →</a></p>
+              <p><span class="tag-win">🥉 3er lugar</span></p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="win">
+        <div class="win-bar peach"><span class="win-title">spacehack_2026</span><span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>
+        <div class="win-body">
+          <div class="item-row">
+            <span class="badge-img win-lav">🚀</span>
+            <div>
+              <p class="item-meta">2026 · participación</p>
+              <p class="item-title">SpaceHACK 2026 · Peak News</p>
+              <p class="item-desc">Plataforma de fact-checking climático sobre los Alpes con datos satelitales (Sentinel-2, Landsat) y literatura científica. React + FastAPI + Google Earth Engine.
+              <a class="link" href="https://github.com/bypaupau/Spacehack-2026-PeakNews" target="_blank" rel="noopener">ver repo →</a></p>
+              <p><span class="tag-win">participación</span></p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="hero-btns" style="margin:32px 0 0">
+      <a class="btn btn-primary" href="proyectos.html">Ver Proyectos</a>
+      <a class="btn btn-ghost" href="contacto.html">Contacto</a>
     </div>
   </div>
 </main>

@@ -1,10 +1,42 @@
 // materias y proyectos del portafolio
 // estados: "completado" | "en-progreso" | "pronto"
 
+// ── MATERIAS (para la página "Materias") ──
 const MATERIAS = [
 
   {
-    periodo: "Extraordinario I - 2026",
+    periodo: "Base de Datos I · 2025",
+    nombre:  "Base de Datos I",
+    color:   "sky",
+    proyectos: [
+      {
+        nombre: "Simulación de Proceso de Adopción",
+        repo:   "https://github.com/DanielV-13/BASE-DE-DATOS-ADOPCION-NI-O",
+        estado: "completado"
+      }
+    ]
+  },
+
+  {
+    periodo: "Lenguajes de Programación · 2026",
+    nombre:  "Lenguajes de Programación",
+    color:   "lav",
+    proyectos: [
+      {
+        nombre: "App Web de Tracking de Libros",
+        repo:   "https://github.com/paumquintana/ProyectoIParcialLenguajesProgramacion",
+        estado: "completado"
+      },
+      {
+        nombre: "Simulación de Videojuego (Laravel + Prolog)",
+        repo:   "https://github.com/paumquintana/proyectoRecuperacionLenguajesProgramacion",
+        estado: "completado"
+      }
+    ]
+  },
+
+  {
+    periodo: "Extraordinario I · 2026",
     nombre:  "Base de Datos II",
     color:   "pink",
     proyectos: [
@@ -16,4 +48,101 @@ const MATERIAS = [
     ]
   },
 
+  {
+    periodo: "Sistemas Distribuidos · 2026",
+    nombre:  "Sistemas Distribuidos",
+    color:   "mint",
+    proyectos: [
+      {
+        nombre: "Inventario + Reportes con Docker",
+        repo:   "https://github.com/bypaupau/proyectoSistemasDistribuidosP1",
+        estado: "completado"
+      }
+    ]
+  },
+
+];
+
+// ── PROYECTOS (para la página con filtros) ──
+// tipo: "academico" | "personal" | "hackathon"  ·  estado: "completado" | "en-progreso" | "pronto"
+// habilidades: lista libre de etiquetas (alimentan el filtro por habilidad)
+// img: ruta de la captura/thumbnail (ej: "img/peaknews.png"). Déjalo "" para mostrar un placeholder.
+const PROYECTOS = [
+  {
+    nombre: "Peak News · Alpine Fact-Checker",
+    tipo: "hackathon",
+    materia: "SpaceHACK 2026",
+    periodo: "2026 · SpaceHACK for Sustainability",
+    descripcion: "Plataforma de fact-checking climático sobre los Alpes: cruza noticias con datos satelitales (Sentinel-2, Landsat) y literatura científica para dar un veredicto de verdad.",
+    habilidades: ["React", "FastAPI", "Python", "TypeScript", "Google Earth Engine"],
+    repo: "https://github.com/bypaupau/Spacehack-2026-PeakNews",
+    img: "",
+    estado: "completado"
+  },
+  {
+    nombre: "Rutas de Incendio · WiDS Datathon",
+    tipo: "hackathon",
+    materia: "WiDS Datathon ESPOL 2026",
+    periodo: "2026 · 3er lugar · equipo Artemis",
+    descripcion: "Notebook de ciencia de datos para analizar y predecir rutas de incendios. 🥉 3er lugar en el WiDS Datathon ESPOL 2026.",
+    habilidades: ["Python", "Data Science", "Jupyter Notebook"],
+    repo: "https://github.com/DATATHON-WIDS/wids-datathon-2026-artemis-4",
+    img: "",
+    estado: "completado"
+  },
+  {
+    nombre: "App Web de Tracking de Libros",
+    tipo: "academico",
+    materia: "Lenguajes de Programación",
+    periodo: "I Parcial · 2026",
+    descripcion: "Aplicación web para llevar el seguimiento de los libros que lees y los que quieres leer.",
+    habilidades: ["JavaScript", "HTML", "CSS"],
+    repo: "https://github.com/paumquintana/ProyectoIParcialLenguajesProgramacion",
+    img: "",
+    estado: "completado"
+  },
+  {
+    nombre: "Simulación de Videojuego · Laravel + Prolog",
+    tipo: "academico",
+    materia: "Lenguajes de Programación",
+    periodo: "Recuperación · 2026",
+    descripcion: "Simulación de un videojuego que combina Laravel para la lógica web y Prolog para el razonamiento.",
+    habilidades: ["Laravel", "Prolog", "PHP"],
+    repo: "https://github.com/paumquintana/proyectoRecuperacionLenguajesProgramacion",
+    img: "",
+    estado: "completado"
+  },
+  {
+    nombre: "Dashboard BI",
+    tipo: "academico",
+    materia: "Base de Datos II",
+    periodo: "Extraordinario I · 2026",
+    descripcion: "Tablero de inteligencia de negocios para analizar facturación, cobranza y servicios, con modelo de datos en SQL.",
+    habilidades: ["SQL", "Data Science", "JavaScript"],
+    repo: "https://github.com/bypaupau/BI-Webpage-Base-De-Datos-Proyecto-II-Parcial",
+    img: "",
+    estado: "completado"
+  },
+  {
+    nombre: "Simulación de Proceso de Adopción",
+    tipo: "academico",
+    materia: "Base de Datos I",
+    periodo: "2025",
+    descripcion: "Simulación de un proceso de adopción con su modelo de base de datos, consultas y lógica del flujo.",
+    habilidades: ["SQL", "Base de Datos"],
+    repo: "https://github.com/DanielV-13/BASE-DE-DATOS-ADOPCION-NI-O",
+    img: "",
+    estado: "completado"
+  },
+  {
+    nombre: "Inventario + Reportes con Docker",
+    tipo: "academico",
+    materia: "Sistemas Distribuidos",
+    periodo: "2026",
+    descripcion: "Sistema distribuido con Docker: mi app de inventario envía datos que se reflejan en la base y el sistema de reportes de un compañero, en tiempo real.",
+    habilidades: ["Docker", "SQL", "Sistemas Distribuidos"],
+    repo: "https://github.com/bypaupau/proyectoSistemasDistribuidosP1",
+    img: "",
+    estado: "completado"
+  }
 ];
