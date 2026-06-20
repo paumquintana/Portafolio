@@ -1,115 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pau.proyectos ✿</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>pau.proyectos ✿</title>
+<meta name="description" content="Portafolio académico de Pau — Ingeniería en Computación. Tecnología + creatividad." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&family=VT323&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
 
-  <!-- ── Navegación ── -->
-  <nav>
-    <a href="#" class="nav-logo">pau<span>.</span>proyectos</a>
-    <ul class="nav-tabs">
-      <li><button data-tab="inicio">Inicio</button></li>
-      <li><button data-tab="sobre">Sobre</button></li>
-      <li><button data-tab="materias">Materias</button></li>
-      <li><button data-tab="trabajo">Proyectos</button></li>
-      <li><button data-tab="cv">cv</button></li>
-    </ul>
-  </nav>
+<nav>
+  <a href="index.html" class="nav-logo">pau<span>.</span>proyectos</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html" class="active">Inicio</a></li>
+    <li><a href="sobremi.html">Sobre</a></li>
+    <li><a href="materias.html">Materias</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
 
-  <!-- ── Contenido principal ── -->
-  <main>
-
-    <!-- INICIO -->
-    <div class="tab-pane active" id="inicio">
-      <section class="hero">
-        <div class="hero-inner">
-
-          <!-- texto -->
-          <div class="hero-text">
-            <p class="hero-greeting">hola, soy</p>
-            <h1 class="hero-name">
-              Pau
-            </h1>
-            <p class="hero-role">Estudiante de Ingeniería en Computación</p>
-            <p class="hero-sem">Sexto semestre - Universidad de Especialidades Espíritu Santo</p>
-            <div class="hero-btns">
-              <button class="btn btn-primary" onclick="showTab('materias')">
-                Ver Proyectos
-              </button>
-              <button class="btn btn-ghost" onclick="showTab('sobre')">
-                Sobre Mí
-              </button>
-            </div>
-          </div>
-
-          <!-- foto placeholder -->
-          <div class="hero-photo">
-            <div class="photo-bar">
-              <div class="dots">
-                <div class="dot-r"></div>
-                <div class="dot-y"></div>
-                <div class="dot-g"></div>
-              </div>
-              <span>foto-de-pau.jpg</span>
-            </div>
-            <div class="photo-placeholder">
-              <span class="pp-icon"></span>
-              <p>Foto aquí pronto</p>
-            </div>
-          </div>
-
+<main>
+  <section class="hero wrap">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">hola, soy</p>
+        <h1 class="hero-name">Pau</h1>
+        <p class="hero-role">Estudiante de Ingeniería en Computación</p>
+        <p class="hero-sem">Sexto semestre · Universidad de Especialidades Espíritu Santo</p>
+        <div class="hero-btns">
+          <a class="btn btn-primary" href="proyectos.html">Ver Proyectos</a>
+          <a class="btn btn-ghost" href="sobremi.html">Sobre Mí</a>
         </div>
-      </section>
-    </div>
+      </div>
 
-    <!-- SOBRE -->
-    <div class="tab-pane" id="sobre">
-      <div class="coming-soon">
-        <span class="cs-icon"></span>
-        <h2>Sobre mí</h2>
-        <p>Esta sección está en construcción.</p>
+      <div class="win hero-card">
+        <div class="win-bar">
+          <span class="win-title">pau.exe</span>
+          <span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span>
+        </div>
+        <div class="win-body">
+          <!-- compu pixel cute -->
+          <svg class="sprite float" viewBox="0 0 16 13" width="140" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="computadora pixel">
+            <rect x="1" y="0" width="14" height="10" fill="#2C1A24"/>
+            <rect x="2" y="1" width="12" height="8" fill="#FFFFFF"/>
+            <rect x="3" y="2" width="10" height="6" fill="#D6EEFB"/>
+            <rect x="5" y="4" width="1" height="1" fill="#2C1A24"/>
+            <rect x="10" y="4" width="1" height="1" fill="#2C1A24"/>
+            <rect x="4" y="5" width="1" height="1" fill="#F4B8CC"/>
+            <rect x="11" y="5" width="1" height="1" fill="#F4B8CC"/>
+            <rect x="5" y="6" width="1" height="1" fill="#2C1A24"/>
+            <rect x="6" y="7" width="4" height="1" fill="#2C1A24"/>
+            <rect x="10" y="6" width="1" height="1" fill="#2C1A24"/>
+            <rect x="7" y="10" width="2" height="1" fill="#2C1A24"/>
+            <rect x="4" y="11" width="8" height="1" fill="#2C1A24"/>
+          </svg>
+          <p class="cap">¡bienvenid@! ✿</p>
+        </div>
       </div>
     </div>
+  </section>
+</main>
 
-    <!-- MATERIAS-->
-    <div class="tab-pane" id="materias">
-      <div class="section-wrap">
-        <p class="sec-label">Proyectos académicos</p>
-        <h2 class="sec-title">Materias</h2>
-        <!-- Las tarjetas se generan desde data/proyectos.js -->
-        <div class="materias-grid" id="materias-grid"></div>
-      </div>
-    </div>
-
-    <!-- TRABAJO -->
-    <div class="tab-pane" id="trabajo">
-      <div class="coming-soon">
-        <span class="cs-icon"></span>
-        <h2>Proyectos de Clase</h2>
-        <p>Esta sección está en construcción.</p>
-      </div>
-    </div>
-
-    <!-- CV -->
-    <div class="tab-pane" id="cv">
-      <div class="coming-soon">
-        <span class="cs-icon"></span>
-        <h2>currículum</h2>
-        <p>Esta sección está en construcción.</p>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- ── Scripts ── -->
-  <!-- 1. Datos de mis proyectos (editar aquí para agregar materias) -->
-  <script src="data/proyectos.js"></script>
-  <!-- 2. Lógica principal -->
-  <script src="js/main.js"></script>
-
+<p class="foot">hecho con <span class="hp">&lt;3</span> + pixeles · por Pau · © 2026</p>
 </body>
 </html>

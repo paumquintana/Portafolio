@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>pau.proyectos · materias</title>
+<meta name="description" content="Materias de Pau por semestre." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&family=VT323&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">pau<span>.</span>proyectos</a>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="sobremi.html">Sobre</a></li>
+    <li><a href="materias.html" class="active">Materias</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="sec-label">Proyectos académicos</p>
+      <h1 class="sec-title">Materias</h1>
+    </div>
+    <div class="materias-grid" id="materias-grid"></div>
+  </div>
+</main>
+
+<p class="foot">hecho con <span class="hp">&lt;3</span> + pixeles · por Pau · © 2026</p>
+
+<script src="data/proyectos.js"></script>
+<script>
+(function(){
+  var BADGE = {
+    'completado':  { label:'listo',       css:'bd-done' },
+    'en-progreso': { label:'en progreso', css:'bd-wip'  },
+    'pronto':      { label:'pronto',      css:'bd-soon' }
+  };
+  var BAR = { pink:'', lav:'lav', mint:'mint', sky:'sky', peach:'peach' };
+  var grid = document.getElementById('materias-grid');
+  if(!grid || typeof MATERIAS==='undefined') return;
+
+  grid.innerHTML = MATERIAS.map(function(m){
+    var bar = BAR[m.color] || '';
+    var items = m.proyectos.map(function(p){
+      var b = BADGE[p.estado] || BADGE['pronto'];
+      return '<li><a href="'+p.repo+'" class="proj-item" target="_blank" rel="noopener">'+p.nombre+
+             '<span class="badge '+b.css+'">'+b.label+'</span></a></li>';
+    }).join('');
+    return '<article class="win">'+
+      '<div class="win-bar '+bar+'"><span class="win-title">'+m.periodo+'</span>'+
+      '<span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>'+
+      '<div class="mat-body"><p class="mat-period">'+m.periodo+'</p>'+
+      '<h3 class="mat-name">'+m.nombre+'</h3>'+
+      '<ul class="proj-list">'+items+'</ul></div></article>';
+  }).join('') +
+  '<article class="win"><div class="win-bar peach"><span class="win-title">próximamente</span>'+
+  '<span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span></div>'+
+  '<div class="mat-body"><p class="mat-period">7mo · 8vo semestre</p>'+
+  '<h3 class="mat-name">Por cursar</h3>'+
+  '<p style="font-size:.9rem;color:var(--text-soft)">Aquí irán las materias y proyectos de los próximos semestres. ✿</p>'+
+  '</div></article>';
+})();
+</script>
+</body>
+</html>

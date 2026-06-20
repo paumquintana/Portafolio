@@ -162,10 +162,10 @@ main {
 
 .photo-bar {
   background: var(--pink-light);
-  padding: 10px 14px;
+  padding: 10px 10px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 18px;
   border-bottom: 1px solid var(--border);
 }
 .photo-bar span {
