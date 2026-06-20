@@ -84,7 +84,7 @@ const PROYECTOS = [
     tipo: "hackathon",
     materia: "WiDS Datathon ESPOL 2026",
     periodo: "2026 · 3er lugar · equipo Artemis",
-    descripcion: "Notebook de ciencia de datos para analizar y predecir rutas de incendios. 🥉 3er lugar en el WiDS Datathon ESPOL 2026.",
+    descripcion: "Notebook de ciencia de datos para analizar y predecir rutas de incendios. 3er lugar en el WiDS Datathon ESPOL 2026.",
     habilidades: ["Python", "Data Science", "Pandas", "Matplot Lib"],
     repo: "https://github.com/DATATHON-WIDS/wids-datathon-2026-artemis-4",
     img: "img/rutasincendio.png",

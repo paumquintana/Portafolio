@@ -258,9 +258,32 @@ main{ position:relative; z-index:2; padding-top:54px; }
 .bd-done{ background:var(--mint); color:#2f7d4a; } .bd-wip{ background:var(--yellow); color:#9a6a13; } .bd-soon{ background:var(--pink-light); color:var(--pink); }
 
 /* ════════ contacto ════════ */
-.contact-grid{ display:flex; flex-wrap:wrap; gap:14px; margin-top:8px; }
 .about-lead{ font-size:1.05rem; color:var(--text-soft); line-height:1.7; }
 .about-lead strong{ color:var(--ink); }
+/* dos columnas: intro+links a la izquierda, form a la derecha */
+.contact-cols{ display:grid; grid-template-columns:1fr 1.05fr; gap:30px; align-items:start; }
+.contact-intro .about-lead{ margin-top:12px; }
+.contact-grid{ display:flex; flex-direction:column; align-items:stretch; gap:12px; margin-top:18px; }
+.contact-grid .btn{ justify-content:center; }
+/* formulario Formspree */
+.contact-form{ display:flex; flex-direction:column; gap:14px; }
+.contact-form label{
+  font-family:var(--font-term); font-size:1.2rem; color:var(--text-soft);
+  display:flex; flex-direction:column; gap:5px;
+}
+.contact-form input, .contact-form textarea{
+  font-family:var(--font-body); font-size:.95rem; color:var(--ink);
+  background:#fff; border:2px solid var(--ink); box-shadow:2px 2px 0 var(--ink);
+  padding:10px 12px; border-radius:0; resize:vertical; width:100%;
+}
+.contact-form input:focus, .contact-form textarea:focus{ outline:none; box-shadow:2px 2px 0 var(--pink); }
+.contact-form .btn{ align-self:flex-start; margin-top:2px; }
+
+/* enlaces "ver ..." en líneas separadas dentro de tarjetas */
+.item-links{ display:flex; flex-direction:column; align-items:flex-start; gap:5px; margin-top:10px; }
+.item-links .link{ display:inline-block; }
+/* sprite pixel dentro de la cajita de logro */
+.item-row .badge-img .sprite{ width:40px; height:auto; }
 
 /* ════════ SOBRE MÍ · skills agrupados ════════ */
 .skill-group{ margin-bottom:18px; }
@@ -271,7 +294,7 @@ main{ position:relative; z-index:2; padding-top:54px; }
   background:var(--pink-light); border:2px solid var(--ink); box-shadow:2px 2px 0 var(--ink);
   padding:5px 12px;
 }
-.skill.dev{ background:var(--sky); } .skill.data{ background:var(--mint); } .skill.design{ background:var(--peach); }
+.skill.dev{ background:var(--sky); } .skill.data{ background:var(--mint); } .skill.design{ background:var(--peach); } .skill.tool{ background:var(--lav); }
 
 /* tarjetas cert / hackathon */
 .item-row{ display:flex; gap:14px; align-items:flex-start; }
@@ -332,6 +355,7 @@ main{ position:relative; z-index:2; padding-top:54px; }
   .hero-btns{ justify-content:center; }
   .hero-card{ max-width:380px; margin:0 auto; }
   .grid-3,.grid-2{ grid-template-columns:1fr; }
+  .contact-cols{ grid-template-columns:1fr; gap:24px; }
   .stats{ grid-template-columns:1fr 1fr; }
   .resumen-grid{ grid-template-columns:1fr; }
   .popups{ grid-template-columns:1fr; gap:24px; }

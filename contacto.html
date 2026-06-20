@@ -30,29 +30,48 @@
       <h1 class="sec-title">Hablemos</h1>
     </div>
 
-    <div class="win" style="max-width:560px">
+    <div class="win" style="max-width:880px">
       <div class="win-bar yellow">
         <span class="win-title">nuevo_mensaje</span>
         <span class="win-ctrls"><i>_</i><i>▢</i><i>✕</i></span>
       </div>
       <div class="win-menu"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>S</u>end</span></div>
       <div class="win-body">
-        <svg class="sprite float" viewBox="0 0 7 6" width="48" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="corazón pixel">
-          <rect x="1" y="0" width="2" height="1" fill="#E87EA1"/>
-          <rect x="4" y="0" width="2" height="1" fill="#E87EA1"/>
-          <rect x="0" y="1" width="7" height="2" fill="#E87EA1"/>
-          <rect x="1" y="3" width="5" height="1" fill="#E87EA1"/>
-          <rect x="2" y="4" width="3" height="1" fill="#E87EA1"/>
-          <rect x="3" y="5" width="1" height="1" fill="#E87EA1"/>
-        </svg>
-        <p class="about-lead" style="margin-top:12px">Siempre abierta a oportunidades creativas y desafiantes.
-        Escríbeme o revisa mi código. ✿</p>
-        <div class="contact-grid">
-          <a class="btn btn-primary" href="mailto:paula.martilloq@gmail.com">✉ Email</a>
-          <a class="btn btn-sky" href="https://github.com/paumquintana" target="_blank" rel="noopener">⌨ GitHub uni</a>
-          <a class="btn btn-sky" href="https://github.com/bypaupau" target="_blank" rel="noopener">⌨ GitHub personal</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">in LinkedIn</a>
-          <a class="btn btn-yellow" href="#">↓ Descargar CV</a>
+        <div class="contact-cols">
+          <div class="contact-intro">
+            <svg class="sprite float" viewBox="0 0 7 6" width="48" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-label="corazón pixel">
+              <rect x="1" y="0" width="2" height="1" fill="#E87EA1"/>
+              <rect x="4" y="0" width="2" height="1" fill="#E87EA1"/>
+              <rect x="0" y="1" width="7" height="2" fill="#E87EA1"/>
+              <rect x="1" y="3" width="5" height="1" fill="#E87EA1"/>
+              <rect x="2" y="4" width="3" height="1" fill="#E87EA1"/>
+              <rect x="3" y="5" width="1" height="1" fill="#E87EA1"/>
+            </svg>
+            <p class="about-lead">Siempre abierta a oportunidades creativas y desafiantes.
+            Escríbeme directo o revisa mis proyectos.</p>
+            <div class="contact-grid">
+              <a class="btn btn-primary" href="mailto:paula.martilloq@gmail.com">Email</a>
+              <a class="btn btn-sky" href="https://github.com/paumquintana" target="_blank" rel="noopener">GitHub Universitario</a>
+              <a class="btn btn-sky" href="https://github.com/bypaupau" target="_blank" rel="noopener">GitHub personal</a>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/paula-m-quintana/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn btn-yellow" href="#">Descargar CV</a>
+            </div>
+          </div>
+
+          <form class="contact-form" action="https://formspree.io/f/TU_FORM_ID" method="POST">
+            <label>nombre
+              <input type="text" name="nombre" placeholder="¿cómo te llamas?" required>
+            </label>
+            <label>correo
+              <input type="email" name="email" placeholder="tu@correo.com" required>
+            </label>
+            <label>mensaje
+              <textarea name="mensaje" rows="5" placeholder="cuéntame en qué puedo ayudar ✿" required></textarea>
+            </label>
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio ✿">
+            <input type="hidden" name="_language" value="es">
+            <button class="btn btn-primary" type="submit">Enviar mensaje →</button>
+          </form>
         </div>
       </div>
     </div>
