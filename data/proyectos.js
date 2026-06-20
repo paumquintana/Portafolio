@@ -131,7 +131,7 @@ const PROYECTOS = [
     descripcion: "Simulación de un proceso de adopción con su modelo de base de datos, consultas y lógica del flujo.",
     habilidades: ["SQL", "Base de Datos"],
     repo: "https://github.com/DanielV-13/BASE-DE-DATOS-ADOPCION-NI-O",
-    img: "",
+    img: "img/agenciaadopcion.png",
     estado: "completado"
   },
   {
@@ -142,7 +142,7 @@ const PROYECTOS = [
     descripcion: "Sistema distribuido con Docker: mi app de inventario envía datos que se reflejan en la base y el sistema de reportes de un compañero, en tiempo real.",
     habilidades: ["Docker", "SQL", "Sistemas Distribuidos"],
     repo: "https://github.com/bypaupau/proyectoSistemasDistribuidosP1",
-    img: "",
+    img: "img/inventariodocker.png",
     estado: "completado"
   }
 ];
