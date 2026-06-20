@@ -76,7 +76,7 @@ const PROYECTOS = [
     descripcion: "Plataforma de fact-checking climático sobre los Alpes: cruza noticias con datos satelitales (Sentinel-2, Landsat) y literatura científica para dar un veredicto de verdad.",
     habilidades: ["React", "FastAPI", "Python", "TypeScript", "Google Earth Engine"],
     repo: "https://github.com/bypaupau/Spacehack-2026-PeakNews",
-    img: "",
+    img: "img/peaknews.png",
     estado: "completado"
   },
   {
@@ -85,9 +85,9 @@ const PROYECTOS = [
     materia: "WiDS Datathon ESPOL 2026",
     periodo: "2026 · 3er lugar · equipo Artemis",
     descripcion: "Notebook de ciencia de datos para analizar y predecir rutas de incendios. 🥉 3er lugar en el WiDS Datathon ESPOL 2026.",
-    habilidades: ["Python", "Data Science", "Jupyter Notebook"],
+    habilidades: ["Python", "Data Science", "Pandas", "Matplot Lib"],
     repo: "https://github.com/DATATHON-WIDS/wids-datathon-2026-artemis-4",
-    img: "",
+    img: "img/rutasincendio.png",
     estado: "completado"
   },
   {
@@ -96,9 +96,9 @@ const PROYECTOS = [
     materia: "Lenguajes de Programación",
     periodo: "I Parcial · 2026",
     descripcion: "Aplicación web para llevar el seguimiento de los libros que lees y los que quieres leer.",
-    habilidades: ["JavaScript", "HTML", "CSS"],
+    habilidades: ["Laravel", "PHP", "SQLite"],
     repo: "https://github.com/paumquintana/ProyectoIParcialLenguajesProgramacion",
-    img: "",
+    img: "img/trackinglibros.png",
     estado: "completado"
   },
   {
@@ -109,7 +109,7 @@ const PROYECTOS = [
     descripcion: "Simulación de un videojuego que combina Laravel para la lógica web y Prolog para el razonamiento.",
     habilidades: ["Laravel", "Prolog", "PHP"],
     repo: "https://github.com/paumquintana/proyectoRecuperacionLenguajesProgramacion",
-    img: "",
+    img: "img/aventuraprolog.png",
     estado: "completado"
   },
   {
@@ -120,7 +120,7 @@ const PROYECTOS = [
     descripcion: "Tablero de inteligencia de negocios para analizar facturación, cobranza y servicios, con modelo de datos en SQL.",
     habilidades: ["SQL", "Data Science", "JavaScript"],
     repo: "https://github.com/bypaupau/BI-Webpage-Base-De-Datos-Proyecto-II-Parcial",
-    img: "",
+    img: "img/dashboardbi.png",
     estado: "completado"
   },
   {
