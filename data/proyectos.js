@@ -144,5 +144,16 @@ const PROYECTOS = [
     repo: "https://github.com/bypaupau/proyectoSistemasDistribuidosP1",
     img: "img/inventariodocker.png",
     estado: "completado"
+  },
+    {
+    nombre: "Aplicación Pomodoro",
+    tipo: "personal",
+    materia: "-",
+    periodo: "2026",
+    descripcion: "Aplicación de Pomodoro en tiempo real con interfaz gráfica y Logs de records",
+    habilidades: ["Python"],
+    repo: "https://github.com/bypaupau/my-pomodoro",
+    img: "img/pomodoro.png",
+    estado: "en-progreso"
   }
 ];
